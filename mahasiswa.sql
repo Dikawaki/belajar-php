@@ -16,3 +16,15 @@ CREATE TABLE mahasiswa (
     alamat VARCHAR(255) NOT NULL,
     FOREIGN KEY (id_jurusan) REFERENCES jurusan(id)
 );
+
+-- insert jurusan
+insert into jurusan(kode, nama) values ("IS", "Ilmu Sejarah");
+
+-- insert mahasiswa
+insert into mahasiswa (id_jurusan, nim, nama, jenis_kelamin, tempat_lahir, tanggal_lahir, alamat) value (1, "20417141026", "Alamsyah", "laki-laki", "Yogyakarta", "2001-12-21", "Jl. Bantul 90");
+
+-- update mahasiswa
+ update mahasiswa set id_jurusan = "2" where id = 2;
+
+-- delete mahasiswa
+delete from mahasiswa where id = 2;
